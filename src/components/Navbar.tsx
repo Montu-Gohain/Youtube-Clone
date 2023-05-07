@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { changeSearchTerm, clearSearchTerm, clearVideos } from "../store";
 import { getSearchPageVideos } from "../store/reducers/getSearchPageVideos";
+import Metube from "../assets/usericon.png";
 
 export default function Navbar() {
   const location = useLocation();
@@ -30,8 +31,8 @@ export default function Navbar() {
         </div>
         <Link to="/">
           <div className="flex gap-1 items-center justify-center">
-            <BsYoutube className="text-3xl text-red-600" />
-            <span className="text-xl font-medium">YouTube</span>
+            <BsYoutube className="text-3xl text-[#FF0000] bg-white p-1 rounded-md" />
+            <span className="text-xl font-roboto">YouTube</span>
           </div>
         </Link>
       </div>
@@ -79,11 +80,7 @@ export default function Navbar() {
             9+
           </span>
         </div>
-        <img
-          src="https://yt3.ggpht.com/wgnEbc2Ec2JYkeyzUbiHzDlAFObI2Btwo2YRCEF1aCMBiRc5E_zWy8-URBQS3EMQ1yzzaGFR=s88-c-k-c0x00ffffff-no-rj-mo"
-          className="w-9 h-9 rounded-full"
-          alt="logo"
-        />
+        <img src={Metube} className="w-9 h-9 rounded-full" alt="logo" />
       </div>
     </div>
   );
